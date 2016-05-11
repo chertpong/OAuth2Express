@@ -2,3 +2,9 @@ extends layout
 
 block content
     p Code : #{code}
+    p#url(onchange='urlChange()')
+    script.
+        function urlChange(){
+            document.getElementById('url').innerHTML= document.location.href;
+        }
+        urlChange();
